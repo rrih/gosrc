@@ -7,10 +7,13 @@ import (
 	"time"
 )
 
+// 読み込み用のリクエストをカプセル化したもの
 type readOp struct {
 	key  int
 	resp chan int
 }
+
+// 書き込み用のリクエストをカプセル化したもの
 type writeOp struct {
 	key  int
 	val  int
@@ -18,13 +21,17 @@ type writeOp struct {
 }
 
 func main() {
-
+	// 操作を実行した回数を数える
 	var readOps uint64
 	var writeOps uint64
 
+	// チャネルを使って他のゴルーチンは読み書きのリクエストする
 	reads := make(chan readOp)
 	writes := make(chan writeOp)
 
+	// このゴルーチンは state を所有する
+	// この状態管理用のゴルーチンだけが読み書きをする
+	// このゴルーチンは reads , writes を繰り返し select し届いたリクエストに返信する
 	go func() {
 		var state = make(map[int]int)
 		for {

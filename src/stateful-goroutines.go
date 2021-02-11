@@ -20,6 +20,7 @@ type writeOp struct {
 	resp chan bool
 }
 
+// go run stateful-goroutines.go
 func main() {
 	// 操作を実行した回数を数える
 	var readOps uint64

@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// ためし: https://gin-gonic.com/ja/docs/quickstart/
 func main() {
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {

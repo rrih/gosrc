@@ -28,8 +28,8 @@ func main() {
 	fruits := []string{"peach", "banana", "kiwiiiiiiii"}
 	// 肩をキャストしてソート
 	sort.Sort(byLength(fruits))
-	nums := []int{1, 4, 66, 44, 12, -1, 10}
-	sort.Sort(byLength(nums))
+	// nums := []int{1, 4, 66, 44, 12, -1, 10}
+	// sort.Sort(byLength(nums))
 	fmt.Println(fruits)
-	fmt.Println(nums)
+	// fmt.Println(nums)
 }

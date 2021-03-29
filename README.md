@@ -1,6 +1,5 @@
 # gosrc
 
-https://www.spinute.org/go-by-example
-をやってみたり
+Golang の学習用のコードリポジトリ
 
-動かすにはgo1.6入れましょう
+ref: https://www.spinute.org/go-by-example

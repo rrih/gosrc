@@ -1,0 +1,1 @@
+Golang で AtCoder やってみるコード置き場
